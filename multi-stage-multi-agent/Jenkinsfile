@@ -22,7 +22,7 @@ pipeline {
         docker { image 'nginx:stable-alpine' }
       }
       steps {
-        sh 'nginx --version'
+        sh 'nginx --v'
       }
     }
   }
