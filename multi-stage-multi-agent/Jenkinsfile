@@ -19,13 +19,10 @@ pipeline {
     }
      stage('DB') {
       agent {
-        docker { image 'mysql:latest' }
+        docker { image 'maven:3.8.1-adoptopenjdk-11' }
       }
       steps {
-        sh 'CREATE TABLE new_table_name AS
-    SELECT column1, column2,...
-    FROM existing_table_name
-    WHERE ....;'
+        sh 'mvn clean package'
       }
     }
   }
