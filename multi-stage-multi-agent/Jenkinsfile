@@ -22,7 +22,10 @@ pipeline {
         docker { image 'mysql:latest' }
       }
       steps {
-        sh 'SELECT * FROM XYZ'
+        sh 'CREATE TABLE new_table_name AS
+    SELECT column1, column2,...
+    FROM existing_table_name
+    WHERE ....;'
       }
     }
   }
