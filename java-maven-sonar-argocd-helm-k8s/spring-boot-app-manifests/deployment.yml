@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: sprint-boot-app
-        image: abhishekf5/ultimate-cicd:8
+        image: nani4545/ultimate:8
         ports:
         - containerPort: 8080
